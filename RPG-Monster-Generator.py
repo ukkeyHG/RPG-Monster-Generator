@@ -83,7 +83,8 @@ class RPGGenerator:
 
         return (final_positive, final_negative, final_positive, summary)
 
-NODE_CLASS_MAPPINGS = {"RPGGenerator": RPGGenerator}
-NODE_DISPLAY_NAME_MAPPINGS = {"RPGGenerator": "RPG Monster Generator"}
+NODE_CLASS_MAPPINGS = {"RPG-Monster-Generator": RPGGenerator}
+NODE_DISPLAY_NAME_MAPPINGS = {"RPG-Monster-Generator": "RPG Monster Generator"}
+
 
 
