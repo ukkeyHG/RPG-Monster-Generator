@@ -25,7 +25,7 @@ def resolve_prompt_variants_with_trace(text):
         return choice
     return re.sub(pattern, replacer, text), selections
 
-class RPGGenerator:
+class RPGMonsterGenerator:
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -83,7 +83,7 @@ class RPGGenerator:
 
         return (final_positive, final_negative, final_positive, summary)
 
-NODE_CLASS_MAPPINGS = {"RPG-Monster-Generator": RPGGenerator}
+NODE_CLASS_MAPPINGS = {"RPG-Monster-Generator": RPGMonsterGenerator}
 NODE_DISPLAY_NAME_MAPPINGS = {"RPG-Monster-Generator": "RPG Monster Generator"}
 
 
