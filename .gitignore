@@ -1,0 +1,14 @@
+# Python キャッシュファイル
+__pycache__/
+*.py[cod]
+*$py.class
+
+# エディタ設定
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS 一時ファイル
+Thumbs.db
+Desktop.ini
