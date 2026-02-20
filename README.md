@@ -9,7 +9,8 @@ Echoes of Eltnia (エルトニアの残響) で使用するモンスター画像
 
 ## 構成
 
-- `RPGGenerator.py`: ComfyUI 用のカスタムノード本体。
+- `RPG-Monster-Generator.py`: ComfyUI 用のカスタムノード本体。
+
 - `rpg_character_data/`: 種族や属性などの定義データ。
 
 ## 導入方法
