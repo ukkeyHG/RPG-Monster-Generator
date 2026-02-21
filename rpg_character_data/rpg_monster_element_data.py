@@ -18,8 +18,8 @@ MONSTER_ELEMENT_DATA = {
         "negative_prompt": "pure, clean, light"
     },
     "Lightning": {
-        "prompt": "electric yellow, crackling lightning arcing, sparking energy bolts, surrounded by storm clouds",
-        "negative_prompt": "calm, water"
+        "prompt": "blue electric arcing, cyan lightning bolts, crackling energy energy, surrounded by storm clouds",
+        "negative_prompt": "yellow, orange, calm, water"
     },
     "Dark": {
         "prompt": "void-like shadowy black, swirling purple dark aura, consuming shadows, abyssal depth",

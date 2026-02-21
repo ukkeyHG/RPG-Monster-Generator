@@ -24,9 +24,10 @@ except Exception as e:
 STYLE_DATA = {
     "Oil Painting": {
         "positive": (
-            "Dark fantasy oil painting style, heavy painterly brushstrokes, moody chiaroscuro lighting. "
-            "90s classic RPG illustration aesthetic, high contrast, gritty texture. "
-            "NO UI, NO TEXT, NO BUTTONS. High detail, masterwork level"
+            "Masterpiece dark fantasy oil painting, heavy impasto brushstrokes, realistic paint texture, "
+            "moody chiaroscuro lighting, deep shadows, rich dramatic colors, "
+            "90s classic high-fantasy RPG manual illustration aesthetic, "
+            "extremely detailed, fine art, professional oil on canvas. NO UI, NO TEXT"
         ),
         "negative": "",
         "steps": 30,
