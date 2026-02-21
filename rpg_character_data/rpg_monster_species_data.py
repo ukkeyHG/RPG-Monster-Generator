@@ -66,8 +66,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "humanoid, person, static pose"
     },
     "Medusa": {
-        "prompt": "A hybrid monster with a (beautiful young woman's face with natural human skin texture and expressive eyes:1.2), (menacing and powerful gorgon:1.1) with writhing snakes for hair, {chest area completely covered by ornate heavy leather and bronze plating starting from the collarbone:1.3}, serpent body with reptilian scales, petrifying gaze, wearing dark stone armor and mystical layered cloth wraps, ominous presence",
-        "negative_prompt": "animal, beast, bird head, snake head, mask, face plate, metallic face, porcelain skin, stiff face, plastic texture, cute, nudity, bare skin, exposed chest, nipples, (topless, naked breasts:1.5), man, male, warrior, weak, fragile, static pose"
+        "prompt": "(A full body study of a hybrid monster:1.3) with a beautiful young woman's face (natural human skin texture:1.1), (menacing and powerful gorgon:1.1) with writhing snakes for hair, {chest area completely covered by ornate heavy leather and bronze plating starting from the collarbone:1.3}, (serpent body with reptilian scales coiled on the dungeon floor:1.3), petrifying gaze, wearing dark stone armor and mystical layered cloth wraps, ominous presence",
+        "negative_prompt": "animal, beast, bird head, snake head, mask, face plate, metallic face, porcelain skin, stiff face, plastic texture, closeup, portrait, headshot, cute, nudity, bare skin, exposed chest, nipples, (topless, naked breasts:1.5), man, male, warrior, weak, fragile, static pose"
     },
     "Gargoyle": {
         "prompt": "A stone-skinned winged gargoyle sentinel, {perched on a gothic pedestal|frozen in statue pose|spreading stony wings}, rocky texture",
@@ -102,8 +102,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, natural, robotic, static pose"
     },
     "Harpy": {
-        "prompt": "A hybrid monster with a (beautiful young woman's face with natural human skin texture and expressive eyes:1.2), (monstrous yet elegant predator:1.1), {massive bird wings instead of arms|large wings attached to shoulders}, {chest and torso elegantly protected by ornate silver armor plates and thick layered silk rags starting from the collarbone:1.3}, lower body of a bird with sharp powerful talons, perched on ruins, ominous presence",
-        "negative_prompt": "mask, face plate, metallic face, porcelain skin, stiff face, plastic texture, exposed breasts, nipples, bare skin, (topless, naked breasts:1.5), man, male, bird head, beak, avian face, animal face, bird torso, feathers on face, purely animal, cute, purely human, weak, fragile, static pose"
+        "prompt": "(A full body shot of a hybrid monster:1.3) with a beautiful young woman's face (natural human skin texture:1.1), (monstrous yet elegant predator:1.1), {massive bird wings instead of arms|large wings attached to shoulders}, {chest and torso elegantly protected by ornate silver armor plates and thick layered silk rags starting from the collarbone:1.3}, (lower body of a bird with sharp powerful talons standing on stone ruins:1.3), ominous presence",
+        "negative_prompt": "mask, face plate, metallic face, porcelain skin, stiff face, plastic texture, closeup, portrait, headshot, exposed breasts, nipples, bare skin, (topless, naked breasts:1.5), man, male, bird head, beak, avian face, animal face, bird torso, feathers on face, purely animal, cute, purely human, weak, fragile, static pose"
     },
     "Wraith": {
         "prompt": "A spectral figure, {fading in and out of shadows|raising a cold scythe|wispy trailing robes}, no face but glowing eyes, floating shadow",

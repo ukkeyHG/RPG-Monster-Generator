@@ -49,7 +49,8 @@ STYLE_DATA = {
     },
     "Ancient Sketch": {
         "positive": (
-            "Rough hand-drawn charcoal and graphite sketch, edge-to-edge drawing, loose pencil lines, messy graphite strokes, "
+            "Full body shot, edge-to-edge anatomy study, complete monster form visible, "
+            "Rough hand-drawn charcoal and graphite sketch, loose pencil lines, messy graphite strokes, "
             "cross-hatching, smudges, unfinished look, monochrome, "
             "antique textured paper background, weathered edges. "
             "NO COLORS, NO DIGITAL, NO PHOTO, NO TEXT."
@@ -134,6 +135,7 @@ class RPGMonsterGenerator:
         # woman を削除し、性別を種族プロンプトで制御できるようにする
         resolved_negatives = [
             "modern, sci-fi, photo, "
+            "closeup, portrait, headshot, bust, macro, cropped face, "
             "pedestal, platform, table, desk, display stand, "
             "frame, border, boxed, picture frame, cropping, margins, bleed, canvas frame, "
             "text, watermark, signature, letters, artist name, logo, words, digits"
