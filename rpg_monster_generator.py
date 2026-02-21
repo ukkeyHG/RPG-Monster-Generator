@@ -78,13 +78,13 @@ STYLE_DATA = {
     },
     "Pixel Art": {
         "positive": (
-            "Hand-crafted 16-bit pixel art, vibrant game sprite aesthetic, limited color palette, "
-            "clean grid-aligned pixels, distinct pixel edges, retro RPG character design. "
-            "NO BLUR, NO GRADIENTS, NO PHOTO, NO 3D."
+            "Hand-crafted 16-bit pixel art, {4k colors|4096 colors palette}, "
+            "chunky pixels, visible pixel grid, sharp jagged edges, individual pixels, "
+            "retro game sprite aesthetic, flat color shading. NO ANTI-ALIASING, NO SMOOTHING."
         ),
         "negative": (
-            "smooth, realistic, 3d, photo, painting, cinematic, high resolution, "
-            "fuzzy, blurry, lighting, shadows, gradient, messy pixels, artifacting"
+            "anti-aliasing, smoothing, blur, gradient, painterly, realistic, 3d, photo, "
+            "high definition textures, soft shading, blurry, anime style illustration"
         ),
         "steps": 25,
         "cfg": 7.0,
