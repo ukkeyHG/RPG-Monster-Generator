@@ -2,8 +2,8 @@
 
 MONSTER_SPECIES_DATA = {
     "Slime": {
-        "prompt": "A plump smooth curved dome of translucent viscous slime, gentle rounded mound slumped on floor, sagging amorphous mass, swirling surface patterns, trapped debris, internal nucleus, glistening wet texture",
-        "negative_prompt": "pyramid, triangular pyramid, cone, tetrahedron, stalagmite, spiky, pointy, sharp, tower, tripod, sphere, ball, orb, perfect circle, symmetrical, pedestal, wall, ceiling, face, text"
+        "prompt": "A plump teardrop-shaped mound of translucent viscous slime, peaked dome shape slumped on floor, pointed mounded heap, collapsed base with elevated center, swirling surface patterns, trapped debris, internal nucleus, glistening wet texture",
+        "negative_prompt": "sphere, ball, orb, perfect circle, round object, symmetrical, floating, flying, suspended, air-borne, watery, thin liquid, humanoid, face, eyes, mouth, teeth, nose, head, limbs, arms, legs, hands, feet, claws, wings, tail, muscular, clothes, text, watermark"
     },
     "Skeleton": {
         "prompt": "An animated skeletal warrior, bleached bones, glowing hollow eye sockets, clutching a cracked shield",
