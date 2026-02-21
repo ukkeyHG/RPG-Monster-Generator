@@ -102,8 +102,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, natural, robotic, static pose"
     },
     "Harpy": {
-        "prompt": "A hybrid monster with a {beautiful human woman's face and fair-skinned upper body|humanoid female head and torso with cloth wrappings}, {large avian wings attached at the shoulders instead of arms|massive wings functioning as arms}, lower body and legs of a bird with feathered hips and talons, perched on a ruined pillar",
-        "negative_prompt": "bird head, beak, avian face, animal head, humanoid lower body, human legs, naked skin, nipples, purely human, purely bird, static pose"
+        "prompt": "A monster with a {human woman's upper body and face|humanoid female torso and breasts}, {massive bird wings instead of arms|large wings attached to shoulders}, fair-skinned human torso, lower body of a bird with sharp talons, {perched on ruins|diving with wings spread}",
+        "negative_prompt": "bird head, beak, avian face, animal face, bird torso, feathers on face, purely animal, cute, purely human, nudity, bare skin, exposed chest, nipples, static pose"
     },
     "Wraith": {
         "prompt": "A spectral figure, {fading in and out of shadows|raising a cold scythe|wispy trailing robes}, no face but glowing eyes, floating shadow",
