@@ -50,13 +50,13 @@ STYLE_DATA = {
     "Ancient Sketch": {
         "positive": (
             "Rough hand-drawn charcoal and graphite sketch, edge-to-edge drawing, loose pencil lines, messy graphite strokes, "
-            "artistic study, cross-hatching, smudges, unfinished look, monochrome, "
+            "cross-hatching, smudges, unfinished look, monochrome, "
             "antique textured paper background, weathered edges. "
             "NO COLORS, NO DIGITAL, NO PHOTO, NO TEXT."
         ),
         "negative": "color, digital, photo, realistic, 3d, painting, render, smooth, frame, border, boxed, margins",
         "steps": 20,
-        "cfg": 6.0,
+        "cfg": 7.0,
         "sampler_name": "euler",
         "scheduler": "normal"
     },
@@ -134,6 +134,7 @@ class RPGMonsterGenerator:
         # woman を削除し、性別を種族プロンプトで制御できるようにする
         resolved_negatives = [
             "modern, sci-fi, anime, photo, "
+            "pedestal, platform, table, desk, display stand, "
             "frame, border, boxed, picture frame, cropping, margins, bleed, canvas frame, "
             "text, watermark, signature, letters, artist name, logo, words, digits"
         ]
