@@ -12,6 +12,11 @@
 | **Oil Painting** | 重厚な油彩画 | Steps: 30, CFG: 8.0, Sampler: dpmpp_2m |
 | **Cinematic Realistic** | 写実的なリアル | Steps: 35, CFG: 6.5, Sampler: dpmpp_3m_sde_gpu |
 | **Ancient Sketch** | 手書きスケッチ | Steps: 20, CFG: 5.0, Sampler: euler |
+| **Anime Cel Shaded** | アニメ風（セル画） | Steps: 28, CFG: 7.5, Sampler: dpmpp_2m |
+
+> [!TIP]
+> **アニメ風スタイルをさらに高品質にするには**
+> `Juggernaut XL` などの実写・汎用系モデルでも動作しますが、アニメ専用モデル（例：`Animagine XL`, `Pony Diffusion V6 XL` など）に切り替えると、より本物のアニメに近い、鮮やかな塗りや綺麗な線画が得られます。
 
 ---
 

@@ -59,6 +59,21 @@ STYLE_DATA = {
         "cfg": 5.0,
         "sampler_name": "euler",
         "scheduler": "normal"
+    },
+    "Anime Cel Shaded": {
+        "positive": (
+            "Stylized 2D anime style, clean lineart, flat cel shading, vibrant colors, "
+            "vivid high-quality anime illustration, character design sheet aesthetic, crisp edges, "
+            "bold colors, simple shading. NO 3D, NO REALISTIC, NO OIL PAINTING, NO TEXTURE"
+        ),
+        "negative": (
+            "realistic, 3d, photo, oil painting, sketch, messy lines, blurry, distorted, grainy, "
+            "detailed texture, realistic skin, noise, canvas texture, heavy brushstrokes"
+        ),
+        "steps": 28,
+        "cfg": 7.5,
+        "sampler_name": "dpmpp_2m",
+        "scheduler": "karras"
     }
 }
 
