@@ -104,7 +104,7 @@ class RPGMonsterGenerator:
             }
         }
 
-    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", SAMPLER_TYPE, SCHEDULER_TYPE)
+    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", SAMPLER_TYPE, SCHEDULER_TYPE, "STRING")
     RETURN_NAMES = (
         "positive_prompt", 
         "negative_prompt", 
@@ -113,7 +113,8 @@ class RPGMonsterGenerator:
         "steps",
         "cfg",
         "sampler_name",
-        "scheduler"
+        "scheduler",
+        "filename_prefix"
     )
     FUNCTION = "generate_prompt"
     CATEGORY = "RPG"
@@ -178,6 +179,8 @@ class RPGMonsterGenerator:
         encoded_positive = encoder.encode(clip, final_positive)[0]
         encoded_negative = encoder.encode(clip, final_negative)[0]
 
+        prefix = f"{species}_{element}"
+
         return (
             final_positive, 
             final_negative, 
@@ -186,7 +189,8 @@ class RPGMonsterGenerator:
             steps,
             cfg,
             sampler_name,
-            scheduler
+            scheduler,
+            prefix
         )
 
 NODE_CLASS_MAPPINGS = {"RPG-Monster-Generator": RPGMonsterGenerator}
