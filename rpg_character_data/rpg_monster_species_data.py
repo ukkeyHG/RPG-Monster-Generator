@@ -2,8 +2,8 @@
 
 MONSTER_SPECIES_DATA = {
     "Slime": {
-        "prompt": "A massive sagging amorphous ooze, structural slump of viscous translucent slime, swirling liquid patterns on surface, subtle debris trapped inside, wide spreading base, viscoelastic flow, creeping tendrils, internal bioluminescent nucleus, glistening wet surface, purely non-spherical",
-        "negative_prompt": "sphere, ball, orb, perfect circle, round object, symmetrical, floating, flying, suspended, air-borne, watery, thin liquid, humanoid, person, face, eyes, mouth, teeth, nose, ears, head, limbs, arms, legs, hands, feet, claws, wings, tail, muscular, skeleton, bones, clothes, tower, solid, text, watermark, signature"
+        "prompt": "A massive heap of translucent viscous slime mounded on the stone dungeon floor, firmly sitting on the ground, low-profile voluminous mound, spreading thick liquid base, swirling liquid patterns on surface, subtle debris trapped inside, glistening wet texture, internal glowing nucleus",
+        "negative_prompt": "dripping from wall, coming out of wall, pedestal, ledge, shelf, shelf-like, hanging from ceiling, floating, flying, suspended, air-borne, watery, thin liquid, humanoid, face, eyes, mouth, teeth, nose, head, limbs, arms, legs, hands, feet, claws, wings, tail, muscular, clothes, text, watermark"
     },
     "Skeleton": {
         "prompt": "An animated skeletal warrior, bleached bones, glowing hollow eye sockets, clutching a cracked shield",
