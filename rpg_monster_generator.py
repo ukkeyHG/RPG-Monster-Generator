@@ -29,7 +29,7 @@ STYLE_DATA = {
             "90s classic high-fantasy RPG manual illustration aesthetic, "
             "extremely detailed, fine art, professional oil on canvas. NO UI, NO TEXT."
         ),
-        "negative": "",
+        "negative": "anime, digital, 3d, photo, futuristic, minimalist, bright colors, flat lighting, clean lines",
         "steps": 30,
         "cfg": 8.0,
         "sampler_name": "dpmpp_2m",
@@ -41,7 +41,7 @@ STYLE_DATA = {
             "moody chiaroscuro lighting, volumetric fog, realistic skin, 8k UHD, RAW photo, "
             "hyperrealistic, extremely detailed. NO UI, NO TEXT."
         ),
-        "negative": "painting, drawing, illustration, sketch",
+        "negative": "anime, painting, drawing, illustration, sketch",
         "steps": 35,
         "cfg": 6.5,
         "sampler_name": "dpmpp_3m_sde_gpu",
@@ -133,7 +133,7 @@ class RPGMonsterGenerator:
         # 基本的なネガティブセット（枠線・文字・署名抑制）
         # woman を削除し、性別を種族プロンプトで制御できるようにする
         resolved_negatives = [
-            "modern, sci-fi, anime, photo, "
+            "modern, sci-fi, photo, "
             "pedestal, platform, table, desk, display stand, "
             "frame, border, boxed, picture frame, cropping, margins, bleed, canvas frame, "
             "text, watermark, signature, letters, artist name, logo, words, digits"
