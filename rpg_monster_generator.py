@@ -27,7 +27,7 @@ STYLE_DATA = {
             "Masterpiece dark fantasy oil painting, heavy impasto brushstrokes, realistic paint texture, "
             "moody chiaroscuro lighting, deep shadows, rich dramatic colors, "
             "90s classic high-fantasy RPG manual illustration aesthetic, "
-            "extremely detailed, fine art, professional oil on canvas. NO UI, NO TEXT"
+            "extremely detailed, fine art, professional oil on canvas. NO UI, NO TEXT."
         ),
         "negative": "",
         "steps": 30,
@@ -39,7 +39,7 @@ STYLE_DATA = {
         "positive": (
             "Cinematic dark fantasy photography, highly detailed monster textures, subsurface scattering, "
             "moody chiaroscuro lighting, volumetric fog, realistic skin, 8k UHD, RAW photo, "
-            "hyperrealistic, extremely detailed. NO UI, NO TEXT"
+            "hyperrealistic, extremely detailed. NO UI, NO TEXT."
         ),
         "negative": "painting, drawing, illustration, sketch",
         "steps": 35,
@@ -52,7 +52,7 @@ STYLE_DATA = {
             "Rough hand-drawn charcoal and graphite sketch, edge-to-edge drawing, loose pencil lines, messy graphite strokes, "
             "artistic study, cross-hatching, smudges, unfinished look, monochrome, "
             "antique textured paper background, weathered edges. "
-            "NO COLORS, NO DIGITAL, NO PHOTO, NO TEXT"
+            "NO COLORS, NO DIGITAL, NO PHOTO, NO TEXT."
         ),
         "negative": "color, digital, photo, realistic, 3d, painting, render, smooth, frame, border, boxed, margins",
         "steps": 20,
@@ -64,7 +64,7 @@ STYLE_DATA = {
         "positive": (
             "Stylized 2D anime style, clean lineart, flat cel shading, vibrant colors, "
             "vivid high-quality anime illustration, character design sheet aesthetic, crisp edges, "
-            "bold colors, simple shading. NO 3D, NO REALISTIC, NO OIL PAINTING, NO TEXTURE"
+            "bold colors, simple shading. NO 3D, NO REALISTIC, NO OIL PAINTING, NO TEXTURE, NO TEXT."
         ),
         "negative": (
             "realistic, 3d, photo, oil painting, sketch, messy lines, blurry, distorted, grainy, "
@@ -99,40 +99,40 @@ class RPGMonsterGenerator:
                 "variant": (list(MONSTER_VARIANT_DATA.keys()),),
                 "rank": (list(MONSTER_RANK_DATA.keys()),),
                 "scene": (list(SCENE_DATA.keys()),),
-                "steps_offset": ("INT", {"default": 0, "min": -100, "max": 100}),
-                "cfg_offset": ("FLOAT", {"default": 0.0, "min": -10.0, "max": 10.0, "step": 0.1}),
+                "steps_offset": ("INT", {"default": 0, "min": -20, "max": 20, "step": 1}),
+                "cfg_offset": ("FLOAT", {"default": 0.0, "min": -5.0, "max": 5.0, "step": 0.1}),
             }
         }
 
-    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", SAMPLER_TYPE, SCHEDULER_TYPE, "STRING")
+    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", SAMPLER_TYPE, SCHEDULER_TYPE)
     RETURN_NAMES = (
-        "positive_prompt", 
-        "negative_prompt", 
-        "positive_conditioning", 
-        "negative_conditioning",
+        "positive_text", 
+        "negative_text", 
+        "conditioning_positive", 
+        "conditioning_negative",
         "steps",
         "cfg",
         "sampler_name",
-        "scheduler",
-        "filename_prefix"
+        "scheduler"
     )
     FUNCTION = "generate_prompt"
     CATEGORY = "RPG"
 
     def generate_prompt(self, clip, style, species, element, variant, rank, scene, steps_offset, cfg_offset):
-        # データの順序：種族を最優先(1番目)にする
+        # データの役割に応じた順序付け
         order = [
-            MONSTER_SPECIES_DATA[species],
-            MONSTER_ELEMENT_DATA[element],
-            MONSTER_VARIANT_DATA[variant],
-            MONSTER_RANK_DATA[rank],
-            SCENE_DATA[scene]
+            MONSTER_SPECIES_DATA[species], # 本体
+            MONSTER_ELEMENT_DATA[element], # 属性装飾
+            MONSTER_VARIANT_DATA[variant], # 状態/ポーズ
+            MONSTER_RANK_DATA[rank],       # 格付け/威圧感
+            SCENE_DATA[scene]              # 背景舞台
         ]
 
         resolved_positives = []
         # 基本的なネガティブセット（枠線・文字・署名抑制）
+        # woman を削除し、性別を種族プロンプトで制御できるようにする
         resolved_negatives = [
-            "modern, sci-fi, anime, photo, humanoid, warrior, person, man, woman, "
+            "modern, sci-fi, anime, photo, humanoid, warrior, person, man, "
             "frame, border, boxed, picture frame, cropping, margins, bleed, canvas frame, "
             "text, watermark, signature, letters, artist name, logo, words, digits"
         ]
@@ -155,7 +155,7 @@ class RPGMonsterGenerator:
 
         # 選択されたスタイル設定を取得
         style_config = STYLE_DATA.get(style, STYLE_DATA["Oil Painting"])
-        base_style_prompt = style_config["positive"]
+        style_positive = style_config["positive"]
         style_negative = style_config["negative"]
         
         # KSampler 推奨値 + オフセット適用
@@ -164,9 +164,12 @@ class RPGMonsterGenerator:
         sampler_name = style_config["sampler_name"]
         scheduler = style_config["scheduler"]
 
-        # 重要：種族プロンプトを先頭、画風スタイルを最後にする。結合には . (ピリオド) を使用。
-        final_positive = ", ".join(filter(None, resolved_positives))
-        final_positive = f"{final_positive}. {base_style_prompt}"
+        # パラメータ設計の再構築：
+        # 1. スタイル(画風)を最優先(先頭)にする
+        # 2. 種族以下をカンマで結合
+        # 3. 画風と内容をピリオドで区切る
+        content_prompt = ", ".join(filter(None, resolved_positives))
+        final_positive = f"{style_positive} {content_prompt}"
         
         # スタイル固有のネガティブがある場合は追加
         if style_negative:

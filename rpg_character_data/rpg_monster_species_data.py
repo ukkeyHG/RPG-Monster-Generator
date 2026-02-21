@@ -90,7 +90,7 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, healthy, fat, static pose"
     },
     "Giant Worm": {
-        "prompt": "A massive earthworm-like monster with a thick tubular fleshy body, {coiled in multiple overlapping rings like a spiral mound|spiraling into a large circular heap}, pinkish-grey segmented skin, {glistening with slime|wet slimy texture}, rows of needle-like teeth in a circular mouth, emerging from a hole in the floor",
+        "prompt": "A massive earthworm-like monster with a thick tubular fleshy body, {coiled into a tight spiral mound|formed into a circular mounded heap}, pinkish-grey segmented skin, {glistening with slime|wet slimy texture}, circular mouth with rows of teeth, slithering on floor",
         "negative_prompt": "humanoid, bird, legs, static pose, face only, wall, emerging from wall, thin body, skinny, long straight line, stretched out, armored, robotic"
     },
     "Chimera": {
@@ -102,8 +102,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, natural, robotic, static pose"
     },
     "Harpy": {
-        "prompt": "A monster with a {human woman's face and upper body covered in thick feathers and cloth wraps|humanoid female torso wrapped in tattered rags and leather straps}, {massive bird wings instead of arms|large wings attached to shoulders}, {chest area completely covered by plumage and cloth|torso protected by jagged armor plates}, lower body of a bird with sharp talons, {perched on ruins|diving with wings spread}",
-        "negative_prompt": "exposed breasts, nipples, bare skin, nudity, bird head, beak, avian face, animal face, bird torso, feathers on face, purely animal, cute, purely human, static pose"
+        "prompt": "A hybrid monster with a {graceful human woman's face and elegant upper body|beautiful humanoid female head and torso}, {massive bird wings instead of arms|large wings attached to shoulders}, {chest area elegantly covered by tattered cloth wraps and feathers|torso wrapped in shredded gothic rags}, lower body of a bird with sharp talons, perched on ruins",
+        "negative_prompt": "exposed breasts, nipples, bare skin, bird head, beak, avian face, animal face, bird torso, feathers on face, purely animal, cute, purely human, static pose"
     },
     "Wraith": {
         "prompt": "A spectral figure, {fading in and out of shadows|raising a cold scythe|wispy trailing robes}, no face but glowing eyes, floating shadow",
