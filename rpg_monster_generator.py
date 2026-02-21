@@ -104,7 +104,7 @@ class RPGMonsterGenerator:
             }
         }
 
-    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", SAMPLER_TYPE, SCHEDULER_TYPE)
+    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", SAMPLER_TYPE, SCHEDULER_TYPE, "STRING")
     RETURN_NAMES = (
         "positive_text", 
         "negative_text", 
@@ -113,7 +113,8 @@ class RPGMonsterGenerator:
         "steps",
         "cfg",
         "sampler_name",
-        "scheduler"
+        "scheduler",
+        "filename_prefix"
     )
     FUNCTION = "generate_prompt"
     CATEGORY = "RPG"
