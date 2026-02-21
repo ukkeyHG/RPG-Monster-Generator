@@ -129,10 +129,11 @@ class RPGMonsterGenerator:
         ]
 
         resolved_positives = []
-        # 基本的なネガティブセットに枠線抑制を追加
+        # 基本的なネガティブセット（枠線・文字・署名抑制）
         resolved_negatives = [
             "modern, sci-fi, anime, photo, humanoid, warrior, person, man, woman, "
-            "frame, border, boxed, picture frame, cropping, margins, bleed, canvas frame"
+            "frame, border, boxed, picture frame, cropping, margins, bleed, canvas frame, "
+            "text, watermark, signature, letters, artist name, logo, words, digits"
         ]
         all_selections = []
 
