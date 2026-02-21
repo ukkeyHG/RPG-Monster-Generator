@@ -2,7 +2,7 @@
 
 MONSTER_SPECIES_DATA = {
     "Slime": {
-        "prompt": "A sagging amorphous mass of translucent viscous slime, irregular lumpy shape spreading on the floor, wide spreading base, gravity-bound slumped form, melting surfaces with thick dripping goo, glossy wet texture, internal glowing core, purely non-spherical",
+        "prompt": "A sentient amorphous ooze, structural slump of viscous translucent slime, viscoelastic flow spreading across the floor, creeping tendrils, irregular formless shifting mass, internal bioluminescent nucleus, glistening wet surface, purely asymmetrical",
         "negative_prompt": "sphere, ball, orb, perfect circle, round object, symmetrical, floating, flying, suspended, air-borne, watery, thin liquid, humanoid, person, face, eyes, mouth, teeth, nose, ears, head, limbs, arms, legs, hands, feet, claws, wings, tail, muscular, skeleton, bones, clothes, tower, solid, text, watermark, signature"
     },
     "Skeleton": {
