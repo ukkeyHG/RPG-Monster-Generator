@@ -8,6 +8,17 @@ from .rpg_character_data.rpg_monster_rank_data import MONSTER_RANK_DATA
 from .rpg_character_data.rpg_scene_data import SCENE_DATA
 
 
+# ComfyUI の内部リストを取得して型ミスマッチを解消する
+try:
+    import nodes
+    # KSampler が期待する正確なリストを取得
+    SAMPLERS = nodes.KSampler.SAMPLERS
+    SCHEDULERS = nodes.KSampler.SCHEDULERS
+except:
+    # 互換性のためのフォールバック
+    SAMPLERS = ["euler", "euler_ancestral", "heun", "dpm_2", "dpm_2_ancestral", "lms", "dpm_fast", "dpm_adaptive", "dpmpp_2s_ancestral", "dpmpp_sde", "dpmpp_sde_gpu", "dpmpp_2m", "dpmpp_2m_sde", "dpmpp_2m_sde_gpu", "ddpm", "lcm"]
+    SCHEDULERS = ["normal", "karras", "exponential", "sgm_uniform", "simple", "ddim_uniform"]
+
 # 高品質なスタイルプリセット
 STYLE_DATA = {
     "Oil Painting": {
@@ -71,10 +82,12 @@ class RPGMonsterGenerator:
                 "variant": (list(MONSTER_VARIANT_DATA.keys()),),
                 "rank": (list(MONSTER_RANK_DATA.keys()),),
                 "scene": (list(SCENE_DATA.keys()),),
+                "steps_offset": ("INT", {"default": 0, "min": -100, "max": 100}),
+                "cfg_offset": ("FLOAT", {"default": 0.0, "min": -10.0, "max": 10.0, "step": 0.1}),
             }
         }
 
-    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", "COMBO", "COMBO")
+    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", SAMPLERS, SCHEDULERS)
     RETURN_NAMES = (
         "positive_prompt", 
         "negative_prompt", 
@@ -88,7 +101,7 @@ class RPGMonsterGenerator:
     FUNCTION = "generate_prompt"
     CATEGORY = "RPG"
 
-    def generate_prompt(self, clip, style, species, element, variant, rank, scene):
+    def generate_prompt(self, clip, style, species, element, variant, rank, scene, steps_offset, cfg_offset):
         # データの順序：種族を最優先(1番目)にする
         order = [
             MONSTER_SPECIES_DATA[species],
@@ -126,9 +139,9 @@ class RPGMonsterGenerator:
         base_style_prompt = style_config["positive"]
         style_negative = style_config["negative"]
         
-        # KSampler 推奨値
-        steps = style_config["steps"]
-        cfg = style_config["cfg"]
+        # KSampler 推奨値 + オフセット適用
+        steps = max(1, style_config["steps"] + steps_offset)
+        cfg = max(0.0, style_config["cfg"] + cfg_offset)
         sampler_name = style_config["sampler_name"]
         scheduler = style_config["scheduler"]
 
