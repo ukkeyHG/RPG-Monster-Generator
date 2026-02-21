@@ -2,8 +2,8 @@
 
 MONSTER_SPECIES_DATA = {
     "Slime": {
-        "prompt": "An amorphous blob of translucent green slime, floor puddle, viscous liquid mass, iridescent gelatinous goo, glowing nucleus, dripping surface, no face, no eyes, featureless entity",
-        "negative_prompt": "humanoid, person, character, creature, face, eyes, mouth, teeth, nose, head, torso, arms, legs, hands, feet, claws, muscular, bones, clothes, silhouette, tower, pillar, solid, text, watermark, signature, letters, artist name"
+        "prompt": "An amorphous formless blob of viscous translucent liquid, large jelly-like mass, floor puddle, glossy reflective surface, internal glowing nucleus, dripping and flowing goo, featureless liquid entity",
+        "negative_prompt": "humanoid, person, character, face, eyes, mouth, teeth, nose, ears, head, limbs, arms, legs, hands, feet, claws, wings, tail, muscular, skeleton, bones, clothes, tower, solid, text, watermark, signature"
     },
     "Skeleton": {
         "prompt": "An animated skeletal warrior, bleached bones, glowing hollow eye sockets, clutching a cracked shield",
