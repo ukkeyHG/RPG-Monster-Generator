@@ -14,7 +14,7 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "animal, weak, thin, friendly gaze, static pose"
     },
     "Dragon": {
-        "prompt": "A colossal ancient dragon, {diving from the sky|soaring with massive leathery wings|three-quarter ground stance}, {jagged reptilian scales|ancient battle scars|glowing chest preparing breath}, imposing presence",
+        "prompt": "A colossal ancient dragon with massive leathery wings, {diving from the sky|soaring with speed|three-quarter ground stance}, {jagged reptilian scales|ancient battle scars|glowing chest preparing breath}, imposing presence",
         "negative_prompt": "humanoid, person, human, clothes, standing on two legs, arms, static pose"
     },
     "Bat": {
