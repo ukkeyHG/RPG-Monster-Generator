@@ -6,7 +6,7 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "sphere, ball, orb, perfect circle, round object, symmetrical, floating, flying, suspended, air-borne, watery, thin liquid, pedestal, platform, humanoid, face, eyes, mouth, teeth, nose, head, limbs, arms, legs, hands, feet, claws, wings, tail, muscular, clothes, text, watermark"
     },
     "Skeleton": {
-        "prompt": "An animated skeletal warrior, {front view|three-quarter view|side profile}, {advancing slowly|shield raised|crouched on one knee|standing tall|lunging forward with weapon|aiming from a side stance}, {rusted iron breastplate|shredded battle-torn banner|ancient necklaces of bone|shattered legionnaire armor|broken ribs exposed}, {wielding a rusty longsword and a cracked wooden shield|aiming a bone bow with both hands|brandishing a jagged iron spear|wielding a heavy iron mace and a battered buckler|bare bony hands}, bleached bones, glowing hollow eye sockets",
+        "prompt": "An animated skeletal warrior, {front view|three-quarter view|side profile}, {standing tall while brandishing a rusty longsword and a cracked wooden shield|raising a battered buckler in defensive stance while clutching a sharp mace|aiming a heavy bone bow with both hands in a wide stance|lunging forward with a jagged iron spear|crouched on one knee while wielding a heavy crude axe|bare bony hands in a menacing predatory pose}, {rusted iron breastplate|shredded battle-torn banner|ancient necklaces of bone|shattered legionnaire armor|broken ribs exposed}, bleached bones, glowing hollow eye sockets",
         "negative_prompt": "flesh, skin, muscle, fat, hair, living person, static pose"
     },
     "Orc": {

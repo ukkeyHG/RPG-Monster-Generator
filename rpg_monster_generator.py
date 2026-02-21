@@ -75,21 +75,6 @@ STYLE_DATA = {
         "cfg": 7.5,
         "sampler_name": "dpmpp_2m",
         "scheduler": "karras"
-    },
-    "Pixel Art": {
-        "positive": (
-            "(pixel art:1.5), mosaic, square blocks, {8-bit|16-bit} retro game sprite, "
-            "flat colors, limited indexed color palette, chunky, aliased, jagged edges. "
-            "NO BLUR, NO SMOOTHING, NO ANTI-ALIASING, NO GRADIENTS."
-        ),
-        "negative": (
-            "(anti-aliasing:1.4), (smooth:1.4), (detailed:1.4), (realistic:1.4), (anime:1.2), "
-            "gradient, shadow, soft lighting, blur, fuzzy edges, high definition textures, illustration style"
-        ),
-        "steps": 25,
-        "cfg": 7.0,
-        "sampler_name": "euler",
-        "scheduler": "normal"
     }
 }
 
