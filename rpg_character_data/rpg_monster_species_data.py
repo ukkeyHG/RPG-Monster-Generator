@@ -90,8 +90,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, healthy, fat, static pose"
     },
     "Giant Worm": {
-        "prompt": "A thick massive segmented tunnel-worm {coiled into a tight compact mound on the floor|formed into a circular mounded heap of rings}, slithering in a spiral, dripping slime, needle-like teeth",
-        "negative_prompt": "humanoid, bird, legs, static pose, face only, wall, emerging from wall, thin body, skinny, long straight line, stretched out"
+        "prompt": "A massive earthworm-like monster with a thick tubular fleshy body, {coiled in multiple overlapping rings like a spiral mound|spiraling into a large circular heap}, pinkish-grey segmented skin, {glistening with slime|wet slimy texture}, rows of needle-like teeth in a circular mouth, emerging from a hole in the floor",
+        "negative_prompt": "humanoid, bird, legs, static pose, face only, wall, emerging from wall, thin body, skinny, long straight line, stretched out, armored, robotic"
     },
     "Chimera": {
         "prompt": "A grotesque chimeric beast with {heads of a lion, goat, and snake|lion head roaring while snake tail strikes}, leathery bat wings, muscular body",
