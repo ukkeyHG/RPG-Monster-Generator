@@ -6,12 +6,12 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "sphere, ball, orb, perfect circle, round object, symmetrical, floating, flying, suspended, air-borne, watery, thin liquid, humanoid, face, eyes, mouth, teeth, nose, head, limbs, arms, legs, hands, feet, claws, wings, tail, muscular, clothes, text, watermark"
     },
     "Skeleton": {
-        "prompt": "An animated skeletal warrior, bleached bones, glowing hollow eye sockets, clutching a cracked shield",
-        "negative_prompt": "flesh, skin, muscle, fat, hair, living person"
+        "prompt": "An animated skeletal warrior, {advancing slowly|shield raised|crouched on one knee}, {rusted iron breastplate|shredded battle-torn banner|ancient necklaces of bone}, bleached bones, glowing hollow eye sockets, clutching a cracked shield",
+        "negative_prompt": "flesh, skin, muscle, fat, hair, living person, static pose"
     },
     "Orc": {
-        "prompt": "A brutal muscular orc warrior with tusks, battle-scarred skin, heavy build",
-        "negative_prompt": "animal, weak, thin, friendly gaze"
+        "prompt": "A brutal muscular orc warrior with tusks, {roaring and lunging|heavy breathing stance|brandishing weapon}, {crude tribal tattoos|fur-lined shoulder pad|heavy studded leather belt}, battle-scarred skin, heavy build",
+        "negative_prompt": "animal, weak, thin, friendly gaze, static pose"
     },
     "Dragon": {
         "prompt": "A colossal ancient dragon, massive leathery wings, jagged reptilian scales, soaring pose",
@@ -50,7 +50,7 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "animal, beast, sunlight, tan skin"
     },
     "Demon": {
-        "prompt": "An infernal demon warrior, {three-quarter view|side profile|dynamic action pose}, {menacing crouch|spreading wings|clenched fists}, curved horns, glowing eyes, surrounding hellfire aura",
+        "prompt": "An infernal demon warrior, {three-quarter view|side profile|dynamic action pose}, {menacing crouch|spreading wings|clenched fists}, {jagged horns|curled demonic horns}, {tattered dark cape|clashing iron chains}, glowing eyes, surrounding hellfire aura",
         "negative_prompt": "angel, holy, human, simple front view, static pose, mugshot style"
     },
     "Ghost": {
