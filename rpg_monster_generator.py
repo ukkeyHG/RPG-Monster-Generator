@@ -23,11 +23,11 @@ STYLE_DATA = {
         "painting, drawing, illustration, sketch"
     ),
     "Ancient Sketch": (
-        "Rough hand-drawn charcoal and graphite sketch, loose pencil lines, messy graphite strokes, "
+        "Rough hand-drawn charcoal and graphite sketch, edge-to-edge drawing, loose pencil lines, messy graphite strokes, "
         "artistic study, cross-hatching, smudges, unfinished look, monochrome, "
         "antique textured paper background, weathered edges. "
         "NO COLORS, NO DIGITAL, NO PHOTO, NO TEXT",
-        "color, digital, photo, realistic, 3d, painting, render, smooth"
+        "color, digital, photo, realistic, 3d, painting, render, smooth, frame, border, boxed, margins"
     )
 }
 
@@ -72,7 +72,11 @@ class RPGMonsterGenerator:
         ]
 
         resolved_positives = []
-        resolved_negatives = ["modern, sci-fi, anime, photo, humanoid, warrior, person, man, woman"]
+        # 基本的なネガティブセットに枠線抑制を追加
+        resolved_negatives = [
+            "modern, sci-fi, anime, photo, humanoid, warrior, person, man, woman, "
+            "frame, border, boxed, picture frame, cropping, margins, bleed, canvas frame"
+        ]
         all_selections = []
 
         for entry in order:
