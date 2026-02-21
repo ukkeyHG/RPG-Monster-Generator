@@ -8,22 +8,26 @@ from .rpg_character_data.rpg_monster_rank_data import MONSTER_RANK_DATA
 from .rpg_character_data.rpg_scene_data import SCENE_DATA
 
 
-# 高品質なスタイルプリセット
+# 高品質なスタイルプリセット (positive_prompt, style_specific_negative)
 STYLE_DATA = {
     "Oil Painting": (
         "Dark fantasy oil painting style, heavy painterly brushstrokes, moody chiaroscuro lighting. "
         "90s classic RPG illustration aesthetic, high contrast, gritty texture. "
-        "NO UI, NO TEXT, NO BUTTONS. High detail, masterwork level"
+        "NO UI, NO TEXT, NO BUTTONS. High detail, masterwork level",
+        ""
     ),
     "Cinematic Realistic": (
         "Cinematic dark fantasy photography, highly detailed monster textures, subsurface scattering, "
         "moody chiaroscuro lighting, volumetric fog, realistic skin, 8k UHD, RAW photo, "
-        "hyperrealistic, extremely detailed. NO UI, NO TEXT"
+        "hyperrealistic, extremely detailed. NO UI, NO TEXT",
+        "painting, drawing, illustration, sketch"
     ),
     "Ancient Sketch": (
-        "Antique parchment paper texture, hand-drawn monster sketch, charcoal and ink illustration, "
-        "da Vinci style technical drawing, aged paper, ink spills, weathered edges, "
-        "intricate line work, sepia tones. NO UI, NO TEXT"
+        "Rough hand-drawn charcoal and graphite sketch, loose pencil lines, messy graphite strokes, "
+        "artistic study, cross-hatching, smudges, unfinished look, monochrome, "
+        "antique textured paper background, weathered edges. "
+        "NO COLORS, NO DIGITAL, NO PHOTO, NO TEXT",
+        "color, digital, photo, realistic, 3d, painting, render, smooth"
     )
 }
 
@@ -87,12 +91,18 @@ class RPGMonsterGenerator:
                 resolved_negatives.append(res_n)
 
         # 選択されたスタイルを取得
-        base_style_prompt = STYLE_DATA.get(style, STYLE_DATA["Oil Painting"])
+        style_config = STYLE_DATA.get(style, STYLE_DATA["Oil Painting"])
+        base_style_prompt = style_config[0]
+        style_negative = style_config[1]
 
         # 重要：種族プロンプトを先頭、画風スタイルを最後にする。結合には . (ピリオド) を使用。
         final_positive = ", ".join(filter(None, resolved_positives))
         final_positive = f"{final_positive}. {base_style_prompt}"
         
+        # スタイル固有のネガティブがある場合は追加
+        if style_negative:
+            resolved_negatives.insert(0, style_negative)
+
         final_negative = ", ".join(filter(None, resolved_negatives))
 
         # Encode prompts
