@@ -6,11 +6,11 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "sphere, ball, orb, perfect circle, round object, symmetrical, floating, flying, suspended, air-borne, watery, thin liquid, pedestal, platform, humanoid, face, eyes, mouth, teeth, nose, head, limbs, arms, legs, hands, feet, claws, wings, tail, muscular, clothes, text, watermark"
     },
     "Skeleton": {
-        "prompt": "An animated skeletal warrior, {advancing slowly|shield raised|crouched on one knee|standing tall}, {rusted iron breastplate|shredded battle-torn banner|ancient necklaces of bone|shattered legionnaire armor|broken ribs exposed}, {wielding a rusty longsword and a cracked wooden shield|aiming a bone bow with both hands|brandishing a jagged iron spear|wielding a heavy iron mace and a battered buckler|bare bony hands}, bleached bones, glowing hollow eye sockets",
+        "prompt": "An animated skeletal warrior, {front view|three-quarter view|side profile}, {advancing slowly|shield raised|crouched on one knee|standing tall|lunging forward with weapon|aiming from a side stance}, {rusted iron breastplate|shredded battle-torn banner|ancient necklaces of bone|shattered legionnaire armor|broken ribs exposed}, {wielding a rusty longsword and a cracked wooden shield|aiming a bone bow with both hands|brandishing a jagged iron spear|wielding a heavy iron mace and a battered buckler|bare bony hands}, bleached bones, glowing hollow eye sockets",
         "negative_prompt": "flesh, skin, muscle, fat, hair, living person, static pose"
     },
     "Orc": {
-        "prompt": "A brutal muscular orc warrior with tusks, {roaring and lunging|heavy breathing stance|brandishing weapon|imposing warrior walk}, {massive notched axe|heavy spiked club|dual-wielding cleavers|hand-and-a-half sword}, {crude tribal tattoos|fur-lined shoulder pad|heavy studded leather belt|bone trophies hanging from belt|furred mantle|scars across chest}, battle-scarred skin, heavy build",
+        "prompt": "A brutal muscular orc warrior with tusks, {front view|three-quarter view|side profile}, {roaring and lunging|heavy breathing stance|brandishing weapon|imposing warrior walk|bracing for impact in a low crouch}, {massive notched axe|heavy spiked club|dual-wielding cleavers|hand-and-a-half sword}, {crude tribal tattoos|fur-lined shoulder pad|heavy studded leather belt|bone trophies hanging from belt|furred mantle|scars across chest}, battle-scarred skin, heavy build",
         "negative_prompt": "animal, weak, thin, friendly gaze, static pose"
     },
     "Dragon": {
@@ -38,7 +38,7 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, beautiful, tall, static pose"
     },
     "Goblin": {
-        "prompt": "A small malevolent green-skinned goblin, {sneaking with a jagged dagger|cackling while pointing|skulking in dungeon shadows|clutching a stolen gemstone|aiming a poisoned shortbow|swinging a stolen mace}, pointed ears, snarling with sharp teeth",
+        "prompt": "A small malevolent green-skinned goblin, {front view|three-quarter view|side profile}, {sneaking with a jagged dagger|cackling while pointing|skulking in dungeon shadows|clutching a stolen gemstone|aiming a poisoned shortbow|swinging a stolen mace|looking up and cackling}, pointed ears, snarling with sharp teeth",
         "negative_prompt": "human, beautiful, tall, static pose, barrel, box"
     },
     "Ogre": {
