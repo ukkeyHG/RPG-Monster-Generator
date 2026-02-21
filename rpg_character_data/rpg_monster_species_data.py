@@ -50,8 +50,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "animal, beast, sunlight, tan skin"
     },
     "Demon": {
-        "prompt": "An infernal demon entity, curved horns, glowing eyes, surrounding hellfire aura",
-        "negative_prompt": "angel, holy, human"
+        "prompt": "An infernal demon warrior, {three-quarter view|side profile|dynamic action pose}, {menacing crouch|spreading wings|clenched fists}, curved horns, glowing eyes, surrounding hellfire aura",
+        "negative_prompt": "angel, holy, human, simple front view, static pose, mugshot style"
     },
     "Ghost": {
         "prompt": "A translucent ethereal ghost apparition, flowing wispy form, glowing mist, floating",
