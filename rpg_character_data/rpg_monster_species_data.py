@@ -38,8 +38,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, cute, static pose"
     },
     "Goblin": {
-        "prompt": "A small malevolent green-skinned goblin, {sneaking with a jagged dagger|cackling while pointing|hiding in a barrel}, pointed ears, snarling with sharp teeth",
-        "negative_prompt": "human, beautiful, tall, static pose"
+        "prompt": "A small malevolent green-skinned goblin, {sneaking with a jagged dagger|cackling while pointing|skulking in dungeon shadows}, pointed ears, snarling with sharp teeth",
+        "negative_prompt": "human, beautiful, tall, static pose, barrel, box"
     },
     "Ogre": {
         "prompt": "A massive muscular ogre brute, {roaring and lunging|club raised high|imposing predatory walk}, thick hide, intimidating size, single horn",
@@ -90,8 +90,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, healthy, fat, static pose"
     },
     "Giant Worm": {
-        "prompt": "A massive segmented tunnel-worm, {bursting from the ground|coiled massive body|emerging from stones}, dripping slime, needle-like teeth",
-        "negative_prompt": "humanoid, bird, legs, static pose"
+        "prompt": "A long massive segmented tunnel-worm, {full body visible and coiled on the floor|bursting from the stony ground|massive slithering body}, dripping slime, needle-like teeth",
+        "negative_prompt": "humanoid, bird, legs, static pose, face only, wall"
     },
     "Chimera": {
         "prompt": "A grotesque chimeric beast with {heads of a lion, goat, and snake|lion head roaring while snake tail strikes}, leathery bat wings, muscular body",
@@ -102,15 +102,15 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, natural, robotic, static pose"
     },
     "Harpy": {
-        "prompt": "A creature with a woman's torso, {perched on jagged rocks|diving from a cliff|preening blood-stained feathers}, dense plumage and tattered cloth",
-        "negative_prompt": "animal, cute, purely human, nudity, bare skin, exposed chest, nipples, static pose"
+        "prompt": "A hybrid creature with a bird-like woman's head and torso, {perched on jagged rocks|diving from a cliff|preening feathers}, dense plumage and tattered cloth wrappings",
+        "negative_prompt": "animal, cute, purely human, purely bird, nudity, bare skin, exposed chest, nipples, static pose"
     },
     "Wraith": {
         "prompt": "A spectral figure, {fading in and out of shadows|raising a cold scythe|wispy trailing robes}, no face but glowing eyes, floating shadow",
         "negative_prompt": "solid, physical, flesh, bone, bright color, static pose"
     },
     "Cerberus": {
-        "prompt": "A massive three-headed monstrous hound, {all three heads snarling|guarding the gates of hell|shadowy black fur flowing}, glowing eyes, powerful muscular build",
-        "negative_prompt": "humanoid, person, cute, domestic dog, static pose"
-    }
+        "prompt": "A massive monstrous hound with three distinct canine heads, {all heads snarling|guarding the gates of hell|full body visible in low stance}, powerful muscular build, thick black fur",
+        "negative_prompt": "humanoid, person, cute, domestic dog, static pose, two heads, one head"
+    },
 }
