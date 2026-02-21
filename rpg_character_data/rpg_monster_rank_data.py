@@ -1,7 +1,7 @@
 # rpg_monster_rank_data.py
 MONSTER_RANK_DATA = {
-    "Common": "",
-    "Elite": "wearing tattered iron ornaments, larger and more imposing",
-    "Boss": "monstrous scale, overwhelming presence, surrounded by a dramatic aura",
-    "Legendary": "shimmering with mythical energy, divine and terrifying masterwork form",
+    "Common": "simple and standard appearance, natural textures, basic equipment",
+    "Elite": "decorated {iron|bronze} {armor|ornaments}, battle-worn features, imposing warrior presence, slight height advantage",
+    "Boss": "colossal {monstrous|towering} scale, {ominous|heavy} glowing aura, debris floating in mid-air, ground cracking underweight, majestic and threatening anatomy",
+    "Legendary": "ethereal {mythical|divine} energy, {intricate golden|celestial} filigree armor, {radiant|glistening} particle effects, otherworldly masterwork form, supreme authority aura",
 }
