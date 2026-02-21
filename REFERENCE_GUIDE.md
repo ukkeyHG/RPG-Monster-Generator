@@ -7,13 +7,27 @@
 ## 1. Style (画風・技法)
 画像全体の描き方を決定します。
 
-| スタイル名 | 概要 | 主なプロンプト内容 |
+| スタイル名 | 概要 | 推奨設定 (自動出力) |
 | :--- | :--- | :--- |
-| **Oil Painting** | 重厚な油彩画 | 暗い照明（キアロスクーロ）、厚塗り、90年代RPG風の筆致 |
-| **Cinematic Realistic** | 写実的なリアル | フォトリアル、精緻な肌の質感、霧、8k、UHD |
-| **Ancient Sketch** | 手書きスケッチ | 鉛筆・木炭画、ラフな線、クロスハッチング、古い紙の質感 |
+| **Oil Painting** | 重厚な油彩画 | Steps: 30, CFG: 8.0, Sampler: dpmpp_2m |
+| **Cinematic Realistic** | 写実的なリアル | Steps: 35, CFG: 6.5, Sampler: dpmpp_3m_sde_gpu |
+| **Ancient Sketch** | 手書きスケッチ | Steps: 20, CFG: 5.0, Sampler: euler |
 
 ---
+
+## 7. KSampler との連携方法
+このノードは、選択したスタイルに最適な KSampler の設定値（steps, cfg, sampler_name, scheduler）を自動的に出力します。
+
+### 設定手順
+1.  **KSampler ノードを用意する**: 通常の `KSampler` ノードを配置します。
+2.  **入力をピンに変換する**: `KSampler` ノードの上で **右クリック** し、以下を選択して各項目を入力ピンに変換します：
+    - `convert steps to input`
+    - `convert cfg to input`
+    - `convert sampler_name to input`
+    - `convert scheduler to input`
+3.  **線を繋ぐ**: `RPG Monster Generator` ノードの各出力ピンから、`KSampler` の対応する入力ピンへ線を繋ぎます。
+
+これで、`style` を切り替えるだけで、プロンプトだけでなく生成設定も自動的に最適化されるようになります。
 
 ## 2. Species (種族)
 モンスターの基本的な外見を決定します。

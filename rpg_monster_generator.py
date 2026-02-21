@@ -8,27 +8,45 @@ from .rpg_character_data.rpg_monster_rank_data import MONSTER_RANK_DATA
 from .rpg_character_data.rpg_scene_data import SCENE_DATA
 
 
-# 高品質なスタイルプリセット (positive_prompt, style_specific_negative)
+# 高品質なスタイルプリセット
 STYLE_DATA = {
-    "Oil Painting": (
-        "Dark fantasy oil painting style, heavy painterly brushstrokes, moody chiaroscuro lighting. "
-        "90s classic RPG illustration aesthetic, high contrast, gritty texture. "
-        "NO UI, NO TEXT, NO BUTTONS. High detail, masterwork level",
-        ""
-    ),
-    "Cinematic Realistic": (
-        "Cinematic dark fantasy photography, highly detailed monster textures, subsurface scattering, "
-        "moody chiaroscuro lighting, volumetric fog, realistic skin, 8k UHD, RAW photo, "
-        "hyperrealistic, extremely detailed. NO UI, NO TEXT",
-        "painting, drawing, illustration, sketch"
-    ),
-    "Ancient Sketch": (
-        "Rough hand-drawn charcoal and graphite sketch, edge-to-edge drawing, loose pencil lines, messy graphite strokes, "
-        "artistic study, cross-hatching, smudges, unfinished look, monochrome, "
-        "antique textured paper background, weathered edges. "
-        "NO COLORS, NO DIGITAL, NO PHOTO, NO TEXT",
-        "color, digital, photo, realistic, 3d, painting, render, smooth, frame, border, boxed, margins"
-    )
+    "Oil Painting": {
+        "positive": (
+            "Dark fantasy oil painting style, heavy painterly brushstrokes, moody chiaroscuro lighting. "
+            "90s classic RPG illustration aesthetic, high contrast, gritty texture. "
+            "NO UI, NO TEXT, NO BUTTONS. High detail, masterwork level"
+        ),
+        "negative": "",
+        "steps": 30,
+        "cfg": 8.0,
+        "sampler_name": "dpmpp_2m",
+        "scheduler": "karras"
+    },
+    "Cinematic Realistic": {
+        "positive": (
+            "Cinematic dark fantasy photography, highly detailed monster textures, subsurface scattering, "
+            "moody chiaroscuro lighting, volumetric fog, realistic skin, 8k UHD, RAW photo, "
+            "hyperrealistic, extremely detailed. NO UI, NO TEXT"
+        ),
+        "negative": "painting, drawing, illustration, sketch",
+        "steps": 35,
+        "cfg": 6.5,
+        "sampler_name": "dpmpp_3m_sde_gpu",
+        "scheduler": "karras"
+    },
+    "Ancient Sketch": {
+        "positive": (
+            "Rough hand-drawn charcoal and graphite sketch, edge-to-edge drawing, loose pencil lines, messy graphite strokes, "
+            "artistic study, cross-hatching, smudges, unfinished look, monochrome, "
+            "antique textured paper background, weathered edges. "
+            "NO COLORS, NO DIGITAL, NO PHOTO, NO TEXT"
+        ),
+        "negative": "color, digital, photo, realistic, 3d, painting, render, smooth, frame, border, boxed, margins",
+        "steps": 20,
+        "cfg": 5.0,
+        "sampler_name": "euler",
+        "scheduler": "normal"
+    }
 }
 
 def resolve_prompt_variants_with_trace(text):
@@ -56,8 +74,17 @@ class RPGMonsterGenerator:
             }
         }
 
-    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING")
-    RETURN_NAMES = ("positive_prompt", "negative_prompt", "positive_conditioning", "negative_conditioning")
+    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", "COMBO", "COMBO")
+    RETURN_NAMES = (
+        "positive_prompt", 
+        "negative_prompt", 
+        "positive_conditioning", 
+        "negative_conditioning",
+        "steps",
+        "cfg",
+        "sampler_name",
+        "scheduler"
+    )
     FUNCTION = "generate_prompt"
     CATEGORY = "RPG"
 
@@ -94,10 +121,16 @@ class RPGMonsterGenerator:
                 res_n, _ = resolve_prompt_variants_with_trace(n)
                 resolved_negatives.append(res_n)
 
-        # 選択されたスタイルを取得
+        # 選択されたスタイル設定を取得
         style_config = STYLE_DATA.get(style, STYLE_DATA["Oil Painting"])
-        base_style_prompt = style_config[0]
-        style_negative = style_config[1]
+        base_style_prompt = style_config["positive"]
+        style_negative = style_config["negative"]
+        
+        # KSampler 推奨値
+        steps = style_config["steps"]
+        cfg = style_config["cfg"]
+        sampler_name = style_config["sampler_name"]
+        scheduler = style_config["scheduler"]
 
         # 重要：種族プロンプトを先頭、画風スタイルを最後にする。結合には . (ピリオド) を使用。
         final_positive = ", ".join(filter(None, resolved_positives))
@@ -114,7 +147,16 @@ class RPGMonsterGenerator:
         encoded_positive = encoder.encode(clip, final_positive)[0]
         encoded_negative = encoder.encode(clip, final_negative)[0]
 
-        return (final_positive, final_negative, encoded_positive, encoded_negative)
+        return (
+            final_positive, 
+            final_negative, 
+            encoded_positive, 
+            encoded_negative,
+            steps,
+            cfg,
+            sampler_name,
+            scheduler
+        )
 
 NODE_CLASS_MAPPINGS = {"RPG-Monster-Generator": RPGMonsterGenerator}
 NODE_DISPLAY_NAME_MAPPINGS = {"RPG-Monster-Generator": "RPG Monster Generator"}
