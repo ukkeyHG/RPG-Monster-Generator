@@ -66,7 +66,7 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "humanoid, person, static pose"
     },
     "Medusa": {
-        "prompt": "(A full body study of a hybrid monster:1.3) in a (dynamic s-curve pose:1.1), (beautiful young woman's face with an alluring and seductive gaze:1.2), (natural human skin texture:1.1), (bewitching and powerful gorgon beauty:1.1) with writhing snakes for hair, {chest area completely protected by elegant form-fitting bronze and leather plating:1.3}, (sensual serpentine body with reptilian scales coiled on floor:1.2), petrifying gaze, wearing stone armor and mystical layered silk wraps, ominous and captivating presence",
+        "prompt": "(A full body study of a hybrid monster:1.3) in a (dynamic s-curve pose:1.1), (beautiful young woman's face with an alluring and seductive gaze:1.2), {refined facial details|clear youthful features|smooth facial contour}, (bewitching and powerful gorgon beauty:1.1) with writhing snakes for hair, {chest area completely protected by elegant form-fitting bronze and leather plating:1.3}, (sensual serpentine body with reptilian scales coiled on floor:1.2), petrifying gaze, wearing stone armor and mystical layered silk wraps, ominous and captivating presence",
         "negative_prompt": "animal, beast, bird head, snake head, mask, face plate, metallic face, porcelain skin, stiff face, plastic texture, closeup, portrait, headshot, cute, nudity, bare skin, exposed chest, nipples, (topless, naked breasts:1.5), man, male, warrior, weak, fragile, static pose"
     },
     "Gargoyle": {
@@ -102,7 +102,7 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, natural, robotic, static pose"
     },
     "Harpy": {
-        "prompt": "(A full body shot of a hybrid monster:1.3) in a (dynamic and seductive s-curve pose:1.2), (beautiful young woman's face with an alluring femme fatale gaze:1.2), (natural human skin texture:1.1), (bewitching yet elegant predator:1.1), {massive bird wings instead of arms|large wings attached to shoulders}, {chest and torso protected by elegant form-fitting silver armor plates and layered silk rags:1.3}, (lower body of a bird with powerful talons standing on ruins:1.2), seductive and ominous presence",
+        "prompt": "(A full body shot of a hybrid monster:1.3) in a (dynamic and seductive s-curve pose:1.2), (beautiful young woman's face with an alluring femme fatale gaze:1.2), {refined facial details|clear youthful features|smooth facial contour}, (bewitching yet elegant predator:1.1), {massive bird wings instead of arms|large wings attached to shoulders}, {chest and torso protected by elegant form-fitting silver armor plates and layered silk rags:1.3}, (lower body of a bird with powerful talons standing on ruins:1.2), seductive and ominous presence",
         "negative_prompt": "mask, face plate, metallic face, porcelain skin, stiff face, plastic texture, closeup, portrait, headshot, exposed breasts, nipples, bare skin, (topless, naked breasts:1.5), man, male, bird head, beak, avian face, animal face, bird torso, feathers on face, purely animal, cute, purely human, weak, fragile, static pose"
     },
     "Wraith": {
