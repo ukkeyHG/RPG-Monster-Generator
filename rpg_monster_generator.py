@@ -8,13 +8,24 @@ from .rpg_character_data.rpg_monster_rank_data import MONSTER_RANK_DATA
 from .rpg_character_data.rpg_scene_data import SCENE_DATA
 
 
-# スタイルは文末に配置するように変更
-# Echoes of Eltnia 標準の重厚な油彩画スタイル
-BASE_STYLE = (
-    "Dark fantasy oil painting style, heavy painterly brushstrokes, moody chiaroscuro lighting. "
-    "90s classic RPG illustration aesthetic, high contrast, gritty texture. "
-    "NO UI, NO TEXT, NO BUTTONS. High detail, masterwork level"
-)
+# 高品質なスタイルプリセット
+STYLE_DATA = {
+    "Oil Painting": (
+        "Dark fantasy oil painting style, heavy painterly brushstrokes, moody chiaroscuro lighting. "
+        "90s classic RPG illustration aesthetic, high contrast, gritty texture. "
+        "NO UI, NO TEXT, NO BUTTONS. High detail, masterwork level"
+    ),
+    "Cinematic Realistic": (
+        "Cinematic dark fantasy photography, highly detailed monster textures, subsurface scattering, "
+        "moody chiaroscuro lighting, volumetric fog, realistic skin, 8k UHD, RAW photo, "
+        "hyperrealistic, extremely detailed. NO UI, NO TEXT"
+    ),
+    "Ancient Sketch": (
+        "Antique parchment paper texture, hand-drawn monster sketch, charcoal and ink illustration, "
+        "da Vinci style technical drawing, aged paper, ink spills, weathered edges, "
+        "intricate line work, sepia tones. NO UI, NO TEXT"
+    )
+}
 
 def resolve_prompt_variants_with_trace(text):
     if not text: return "", []
@@ -32,6 +43,7 @@ class RPGMonsterGenerator:
         return {
             "required": {
                 "clip": ("CLIP",),
+                "style": (list(STYLE_DATA.keys()),),
                 "species": (list(MONSTER_SPECIES_DATA.keys()),),
                 "element": (list(MONSTER_ELEMENT_DATA.keys()),),
                 "variant": (list(MONSTER_VARIANT_DATA.keys()),),
@@ -45,7 +57,7 @@ class RPGMonsterGenerator:
     FUNCTION = "generate_prompt"
     CATEGORY = "RPG"
 
-    def generate_prompt(self, clip, species, element, variant, rank, scene):
+    def generate_prompt(self, clip, style, species, element, variant, rank, scene):
         # データの順序：種族を最優先(1番目)にする
         order = [
             MONSTER_SPECIES_DATA[species],
@@ -74,9 +86,12 @@ class RPGMonsterGenerator:
                 res_n, _ = resolve_prompt_variants_with_trace(n)
                 resolved_negatives.append(res_n)
 
+        # 選択されたスタイルを取得
+        base_style_prompt = STYLE_DATA.get(style, STYLE_DATA["Oil Painting"])
+
         # 重要：種族プロンプトを先頭、画風スタイルを最後にする。結合には . (ピリオド) を使用。
         final_positive = ", ".join(filter(None, resolved_positives))
-        final_positive = f"{final_positive}. {BASE_STYLE}"
+        final_positive = f"{final_positive}. {base_style_prompt}"
         
         final_negative = ", ".join(filter(None, resolved_negatives))
 
