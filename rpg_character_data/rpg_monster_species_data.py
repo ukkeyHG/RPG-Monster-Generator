@@ -90,8 +90,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, healthy, fat, static pose"
     },
     "Giant Worm": {
-        "prompt": "A long massive segmented tunnel-worm, {full body visible and coiled on the floor|bursting from the stony ground|massive slithering body}, dripping slime, needle-like teeth",
-        "negative_prompt": "humanoid, bird, legs, static pose, face only, wall"
+        "prompt": "A long massive segmented tunnel-worm, {wide shot showing the entire long body lying on the dungeon floor|massive elongated body coiled on the stone ground}, crawling on the floor, dripping slime, needle-like teeth",
+        "negative_prompt": "humanoid, bird, legs, static pose, face only, wall, emerging from wall, half hidden, coming out of rock"
     },
     "Chimera": {
         "prompt": "A grotesque chimeric beast with {heads of a lion, goat, and snake|lion head roaring while snake tail strikes}, leathery bat wings, muscular body",
@@ -102,8 +102,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, natural, robotic, static pose"
     },
     "Harpy": {
-        "prompt": "A hybrid creature with a bird-like woman's head and torso, {perched on jagged rocks|diving from a cliff|preening feathers}, dense plumage and tattered cloth wrappings",
-        "negative_prompt": "animal, cute, purely human, purely bird, nudity, bare skin, exposed chest, nipples, static pose"
+        "prompt": "A monster with a {human woman's upper body and face|humanoid female torso and breasts}, {massive bird wings instead of arms|large wings attached to shoulders}, lower body of a bird with sharp talons, {perched on ruins|diving with wings spread}",
+        "negative_prompt": "animal face, bird head on human body, bird torso, purely animal, cute, purely human, nudity, bare skin, exposed chest, nipples, static pose"
     },
     "Wraith": {
         "prompt": "A spectral figure, {fading in and out of shadows|raising a cold scythe|wispy trailing robes}, no face but glowing eyes, floating shadow",
