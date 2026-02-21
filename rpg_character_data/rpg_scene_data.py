@@ -2,7 +2,7 @@
 
 SCENE_DATA = {
     "Dungeon": {
-        "prompt": "set in a dark grimy stone dungeon background, humid mossy walls, stone floor with cracks, iron bars",
+        "prompt": "set in a dark grimy stone dungeon background, humid mossy walls, stone floor with cracks, iron bars, heavy rusty iron chains hanging from ceilings",
         "negative_prompt": "outdoor, sky, forest, bright room"
     },
     "Lava Cave": {

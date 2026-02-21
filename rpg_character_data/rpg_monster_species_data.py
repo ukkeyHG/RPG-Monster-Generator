@@ -108,5 +108,9 @@ MONSTER_SPECIES_DATA = {
     "Wraith": {
         "prompt": "A spectral figure in tattered black cowls, no face but glowing eyes, holding a cold scythe, floating shadow",
         "negative_prompt": "solid, physical, flesh, bone, bright color"
+    },
+    "Cerberus": {
+        "prompt": "A massive three-headed monstrous hound, glowing eyes, powerful muscular build, snarling heads, sharp fangs, thick black fur",
+        "negative_prompt": "humanoid, person, cute, domestic dog"
     }
 }
