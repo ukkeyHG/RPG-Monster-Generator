@@ -1,5 +1,6 @@
 import random
 import re
+from nodes import CLIPTextEncode
 from .rpg_character_data.rpg_monster_species_data import MONSTER_SPECIES_DATA
 from .rpg_character_data.rpg_monster_element_data import MONSTER_ELEMENT_DATA
 from .rpg_character_data.rpg_monster_variant_data import MONSTER_VARIANT_DATA
@@ -30,6 +31,7 @@ class RPGMonsterGenerator:
     def INPUT_TYPES(cls):
         return {
             "required": {
+                "clip": ("CLIP",),
                 "species": (list(MONSTER_SPECIES_DATA.keys()),),
                 "element": (list(MONSTER_ELEMENT_DATA.keys()),),
                 "variant": (list(MONSTER_VARIANT_DATA.keys()),),
@@ -38,12 +40,12 @@ class RPGMonsterGenerator:
             }
         }
 
-    RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING")
-    RETURN_NAMES = ("positive_prompt", "negative_prompt", "Ollama_Generate_V2_Textbox_2", "selection_summary")
+    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING")
+    RETURN_NAMES = ("positive_prompt", "negative_prompt", "positive_conditioning", "negative_conditioning")
     FUNCTION = "generate_prompt"
     CATEGORY = "RPG"
 
-    def generate_prompt(self, species, element, variant, rank, scene):
+    def generate_prompt(self, clip, species, element, variant, rank, scene):
         # データの順序：種族を最優先(1番目)にする
         order = [
             MONSTER_SPECIES_DATA[species],
@@ -78,10 +80,12 @@ class RPGMonsterGenerator:
         
         final_negative = ", ".join(filter(None, resolved_negatives))
 
-        summary = f"Species: {species}\nElement: {element}\nVariant: {variant}\nRank: {rank}\nScene: {scene}"
-        if all_selections: summary += "\nChoices: " + ", ".join(all_selections)
+        # Encode prompts
+        encoder = CLIPTextEncode()
+        encoded_positive = encoder.encode(clip, final_positive)[0]
+        encoded_negative = encoder.encode(clip, final_negative)[0]
 
-        return (final_positive, final_negative, final_positive, summary)
+        return (final_positive, final_negative, encoded_positive, encoded_negative)
 
 NODE_CLASS_MAPPINGS = {"RPG-Monster-Generator": RPGMonsterGenerator}
 NODE_DISPLAY_NAME_MAPPINGS = {"RPG-Monster-Generator": "RPG Monster Generator"}
