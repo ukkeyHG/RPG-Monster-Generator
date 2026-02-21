@@ -146,11 +146,11 @@ class RPGMonsterGenerator:
                 # サイズ感の制御：種族(MONSTER_SPECIES_DATA)のエントリを処理する際にサイズキーワードを挿入
                 if "size" in entry:
                     if entry["size"] == "small":
-                        resolved_positives.append("tiny diminutive creature, small scale in wide shot, full body from distance")
-                        resolved_negatives.append("close-up, macro, zoom, portrait, large on screen")
+                        resolved_positives.append("a tiny diminutive creature surrounded by a vast empty stone floor, high angle top-down view, shown from a distance, small scale relative to environment")
+                        resolved_negatives.append("close-up, macro, zoom, portrait, large on screen, filling the frame, signature, watermark, logo, text, bottom right text, copyright, stamp, writing, letter, digit, numbers, timestamp")
                     else:
                         resolved_positives.append("massive colossal behemoth, giant scale, low angle shot, imposing presence")
-                        resolved_negatives.append("small, tiny, miniature, distant")
+                        resolved_negatives.append("small, tiny, miniature, distant, signature, watermark, text")
             else:
                 p = str(entry)
             
