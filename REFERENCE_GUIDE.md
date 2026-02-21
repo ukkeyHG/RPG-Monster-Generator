@@ -13,6 +13,7 @@
 | **Cinematic Realistic** | 写実的なリアル | Steps: 35, CFG: 6.5, Sampler: dpmpp_3m_sde_gpu |
 | **Ancient Sketch** | 手書きスケッチ | Steps: 20, CFG: 5.0, Sampler: euler |
 | **Anime Cel Shaded** | アニメ風（セル画） | Steps: 28, CFG: 7.5, Sampler: dpmpp_2m |
+| **Pixel Art** | レトロなドット絵風 | Steps: 25, CFG: 7.0, Sampler: euler |
 
 > [!TIP]
 > **アニメ風スタイルをさらに高品質にするには**

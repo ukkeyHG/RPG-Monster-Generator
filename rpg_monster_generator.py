@@ -75,6 +75,21 @@ STYLE_DATA = {
         "cfg": 7.5,
         "sampler_name": "dpmpp_2m",
         "scheduler": "karras"
+    },
+    "Pixel Art": {
+        "positive": (
+            "Hand-crafted 16-bit pixel art, vibrant game sprite aesthetic, limited color palette, "
+            "clean grid-aligned pixels, distinct pixel edges, retro RPG character design. "
+            "NO BLUR, NO GRADIENTS, NO PHOTO, NO 3D."
+        ),
+        "negative": (
+            "smooth, realistic, 3d, photo, painting, cinematic, high resolution, "
+            "fuzzy, blurry, lighting, shadows, gradient, messy pixels, artifacting"
+        ),
+        "steps": 25,
+        "cfg": 7.0,
+        "sampler_name": "euler",
+        "scheduler": "normal"
     }
 }
 
