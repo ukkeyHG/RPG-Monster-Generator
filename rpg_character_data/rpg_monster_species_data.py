@@ -66,8 +66,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "humanoid, person, static pose"
     },
     "Medusa": {
-        "prompt": "A (menacing and powerful gorgon:1.2) with a serpent body, {writhing snakes for hair|petrifying gaze|serpentine slither pose}, {chest area completely covered by ornate heavy leather and bronze plating:1.3}, wearing dark stone armor and mystical layered cloth wraps, ominous presence",
-        "negative_prompt": "animal, cute, nudity, bare skin, exposed chest, nipples, (topless, naked breasts:1.5), man, male, warrior, weak, fragile, static pose"
+        "prompt": "A hybrid monster with a {beautiful woman's face with an intense gaze|alluring and feminine humanoid head}, (menacing and powerful gorgon:1.1) with writhing snakes for hair, {chest area completely covered by ornate heavy leather and bronze plating:1.3}, serpent body with reptilian scales, petrifying gaze, wearing dark stone armor and mystical layered cloth wraps, ominous presence",
+        "negative_prompt": "animal, beast, bird head, snake head, cute, nudity, bare skin, exposed chest, nipples, (topless, naked breasts:1.5), man, male, warrior, weak, fragile, static pose"
     },
     "Gargoyle": {
         "prompt": "A stone-skinned winged gargoyle sentinel, {perched on a gothic pedestal|frozen in statue pose|spreading stony wings}, rocky texture",
@@ -102,7 +102,7 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, natural, robotic, static pose"
     },
     "Harpy": {
-        "prompt": "A (monstrous yet graceful humanoid predator:1.2), {beautiful human woman's face and elegant upper body|feminine human head and torso}, {massive bird wings instead of arms|large wings attached to shoulders}, {chest and torso elegantly protected by ornate silver armor plates and thick layered silk rags:1.3}, lower body of a bird with sharp powerful talons, perched on ruins, ominous presence",
+        "prompt": "A hybrid monster with a {beautiful human woman's face and elegant upper body|graceful humanoid female head and torso}, (monstrous yet elegant predator:1.1), {massive bird wings instead of arms|large wings attached to shoulders}, {chest and torso elegantly protected by ornate silver armor plates and thick layered silk rags:1.3}, lower body of a bird with sharp powerful talons, perched on ruins, ominous presence",
         "negative_prompt": "exposed breasts, nipples, bare skin, (topless, naked breasts:1.5), man, male, bird head, beak, avian face, animal face, bird torso, feathers on face, purely animal, cute, purely human, weak, fragile, static pose"
     },
     "Wraith": {
