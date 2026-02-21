@@ -30,7 +30,7 @@ MONSTER_ELEMENT_DATA = {
         "negative_prompt": "dark, shadow, abyss"
     },
     "Metal": {
-        "prompt": "sleek metallic liquid chrome, highly reflective surface, mirror-like finish, hard steel texture",
-        "negative_prompt": "soft, organic, flesh"
+        "prompt": "polished liquid metal chrome, highly reflective mirror-like surface, heavy metallic sheen, cold steel texture",
+        "negative_prompt": "soft, organic, translucent, green, flesh"
     }
 }
