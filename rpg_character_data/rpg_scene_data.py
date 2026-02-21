@@ -20,9 +20,5 @@ SCENE_DATA = {
     "Throne Room": {
         "prompt": "set in a ruined gothic throne hall, tattered tapestries, cracked marble floor, dim shafts of light",
         "negative_prompt": "simple room, kitchen"
-    },
-    "Transparent (White)": {
-        "prompt": "isolated on a pure solid white background, studio lighting, professional product photography style, centered, high contrast, clean edges",
-        "negative_prompt": "shadows on background, ground, floor, landscape, horizon, outdoors, messy, blurry background, depth of field"
     }
 }
