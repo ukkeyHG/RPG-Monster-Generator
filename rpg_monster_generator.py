@@ -8,16 +8,17 @@ from .rpg_character_data.rpg_monster_rank_data import MONSTER_RANK_DATA
 from .rpg_character_data.rpg_scene_data import SCENE_DATA
 
 
-# ComfyUI の内部リストを取得して型ミスマッチを解消する
+# ComfyUI の KSampler から直接型定義を取得して型ミスマッチを回避する
 try:
     import nodes
-    # KSampler が期待する正確なリストを取得
-    SAMPLERS = nodes.KSampler.SAMPLERS
-    SCHEDULERS = nodes.KSampler.SCHEDULERS
-except:
-    # 互換性のためのフォールバック
-    SAMPLERS = ["euler", "euler_ancestral", "heun", "dpm_2", "dpm_2_ancestral", "lms", "dpm_fast", "dpm_adaptive", "dpmpp_2s_ancestral", "dpmpp_sde", "dpmpp_sde_gpu", "dpmpp_2m", "dpmpp_2m_sde", "dpmpp_2m_sde_gpu", "ddpm", "lcm"]
-    SCHEDULERS = ["normal", "karras", "exponential", "sgm_uniform", "simple", "ddim_uniform"]
+    # KSampler の入力型定義（リスト）をそのまま取得して「自分の出力型」として利用する
+    _ks_input = nodes.KSampler.INPUT_TYPES()["required"]
+    SAMPLER_TYPE = _ks_input["sampler_name"][0]
+    SCHEDULER_TYPE = _ks_input["scheduler"][0]
+except Exception as e:
+    # 失敗した場合のフォールバック
+    SAMPLER_TYPE = ["euler", "euler_ancestral", "heun", "dpm_2", "dpm_2_ancestral", "lms", "dpm_fast", "dpm_adaptive", "dpmpp_2s_ancestral", "dpmpp_sde", "dpmpp_sde_gpu", "dpmpp_2m", "dpmpp_2m_sde", "dpmpp_2m_sde_gpu", "ddpm", "lcm"]
+    SCHEDULER_TYPE = ["normal", "karras", "exponential", "sgm_uniform", "simple", "ddim_uniform"]
 
 # 高品質なスタイルプリセット
 STYLE_DATA = {
@@ -87,7 +88,7 @@ class RPGMonsterGenerator:
             }
         }
 
-    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", SAMPLERS, SCHEDULERS)
+    RETURN_TYPES = ("STRING", "STRING", "CONDITIONING", "CONDITIONING", "INT", "FLOAT", SAMPLER_TYPE, SCHEDULER_TYPE)
     RETURN_NAMES = (
         "positive_prompt", 
         "negative_prompt", 
