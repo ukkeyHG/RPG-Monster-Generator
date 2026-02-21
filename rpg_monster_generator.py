@@ -102,6 +102,7 @@ class RPGMonsterGenerator:
                 "scene": (list(SCENE_DATA.keys()),),
                 "steps_offset": ("INT", {"default": 0, "min": -20, "max": 20, "step": 1}),
                 "cfg_offset": ("FLOAT", {"default": 0.0, "min": -5.0, "max": 5.0, "step": 0.1}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
             }
         }
 
@@ -120,7 +121,9 @@ class RPGMonsterGenerator:
     FUNCTION = "generate_prompt"
     CATEGORY = "RPG"
 
-    def generate_prompt(self, clip, style, species, element, variant, rank, scene, steps_offset, cfg_offset):
+    def generate_prompt(self, clip, style, species, element, variant, rank, scene, steps_offset, cfg_offset, seed):
+        # 確実にランダムな抽選が行われるようにシードをセット
+        random.seed(seed)
         # データの役割に応じた順序付け
         order = [
             MONSTER_SPECIES_DATA[species], # 本体
