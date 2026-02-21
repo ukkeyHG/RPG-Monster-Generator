@@ -19,11 +19,11 @@ MONSTER_SPECIES_DATA = {
     },
     "Bat": {
         "prompt": "A {giant leathery-winged cave bat|swarm of small bats merging}, {clinging to ceiling upside down|screeching with wings spread|flying through dark mist}, sharp fangs, furred body",
-        "negative_prompt": "humanoid, legs, standing, bird, static pose"
+        "negative_prompt": "humanoid, person, legs, standing, bird, static pose"
     },
     "Rat": {
         "prompt": "A mutated {giant rat beast|pack of scurrying rats}, {hiding in shadows|gnawing on bones|scuttling on dungeon floor}, mangy fur, glowing red eyes, sharp claws",
-        "negative_prompt": "humanoid, standing, cute, pet, static pose"
+        "negative_prompt": "humanoid, person, standing, cute, pet, static pose"
     },
     "Frog": {
         "prompt": "A bloated toad-like monster, {preparing to leap|tongue lashed out|crouched on a mossy stone}, warty necrotic skin, predatory yellow eyes",
@@ -31,7 +31,7 @@ MONSTER_SPECIES_DATA = {
     },
     "Spider": {
         "prompt": "A massive venomous giant spider, {skittering on web|descending from silk thread|ambushing from shadows}, multiple glowing eyes, hairy chitinous legs",
-        "negative_prompt": "humanoid, face, person, two legs, arms, static pose"
+        "negative_prompt": "humanoid, person, face, two legs, arms, static pose"
     },
     "Kobold": {
         "prompt": "A small reptilian kobold warrior, {scouting with a flickering torch|hiding behind dungeon debris|brandishing a crude spear}, animalistic features, lizard-like skin",
@@ -79,31 +79,31 @@ MONSTER_SPECIES_DATA = {
     },
     "Mimic": {
         "prompt": "A living mimic chest monster, {lid wide open with sharp teeth|disguised as a common wooden chest|sticky tongue lashing out}, wooden texture",
-        "negative_prompt": "humanoid, legs, arms, person, static pose"
+        "negative_prompt": "humanoid, person, legs, arms, static pose"
     },
     "Wolf": {
         "prompt": "A savage giant wolf, {howling to the moon|leaping in attack|low predatory prowl}, bristling fur, snarling teeth",
-        "negative_prompt": "humanoid, dog, domestic, static pose"
+        "negative_prompt": "humanoid, person, dog, domestic, static pose"
     },
     "Ghoul": {
         "prompt": "A feral gaunt undead creature, {hiding in a grave|feasting on remains|twitching erratic pose}, pale stretched skin, necrotic aura",
         "negative_prompt": "human, healthy, fat, static pose"
     },
     "Giant Worm": {
-        "prompt": "A massive earthworm-like monster with a thick tubular fleshy body, {coiled into a tight spiral mound|formed into a circular mounded heap}, pinkish-grey segmented skin, {glistening with slime|wet slimy texture}, circular mouth with rows of teeth, slithering on floor",
-        "negative_prompt": "humanoid, bird, legs, static pose, face only, wall, emerging from wall, thin body, skinny, long straight line, stretched out, armored, robotic"
+        "prompt": "A massive earthworm-like monster with a thick tubular fleshy body, {coiled into a dense spiral mound|formed into a circular mounded heap}, pinkish-grey segmented skin, {glistening with slime|wet slimy texture}, circular mouth with rows of teeth, slithering on floor",
+        "negative_prompt": "humanoid, person, bird, legs, static pose, face only, wall, emerging from wall, thin body, skinny, long straight line, stretched out, armored, robotic"
     },
     "Chimera": {
         "prompt": "A grotesque chimeric beast with {heads of a lion, goat, and snake|lion head roaring while snake tail strikes}, leathery bat wings, muscular body",
-        "negative_prompt": "humanoid, small, cute, static pose"
+        "negative_prompt": "humanoid, person, small, cute, static pose"
     },
     "Flesh Golem": {
         "prompt": "A hulking construct of stitched muscle, {heavy shuffling gait|stitches pulling apart|electrified aura}, glowing necrotic energy",
         "negative_prompt": "human, natural, robotic, static pose"
     },
     "Harpy": {
-        "prompt": "A hybrid monster with a {graceful human woman's face and elegant upper body|beautiful humanoid female head and torso}, {massive bird wings instead of arms|large wings attached to shoulders}, {chest area elegantly covered by tattered cloth wraps and feathers|torso wrapped in shredded gothic rags}, lower body of a bird with sharp talons, perched on ruins",
-        "negative_prompt": "exposed breasts, nipples, bare skin, bird head, beak, avian face, animal face, bird torso, feathers on face, purely animal, cute, purely human, static pose"
+        "prompt": "A monstrous yet graceful hybrid monster with a {graceful human woman's face and elegant upper body|beautiful humanoid female head and torso}, {massive bird wings instead of arms|large wings attached to shoulders}, {chest area elegantly covered by ornate silver armor plates and layered gothic silk rags|torso wrapped in shredded gothic rags}, lower body of a bird with sharp talons, perched on ruins",
+        "negative_prompt": "exposed breasts, nipples, bare skin, man, male, bird head, beak, avian face, animal face, bird torso, feathers on face, purely animal, cute, purely human, static pose"
     },
     "Wraith": {
         "prompt": "A spectral figure, {fading in and out of shadows|raising a cold scythe|wispy trailing robes}, no face but glowing eyes, floating shadow",

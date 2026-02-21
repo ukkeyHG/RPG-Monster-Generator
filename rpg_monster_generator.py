@@ -56,7 +56,7 @@ STYLE_DATA = {
         ),
         "negative": "color, digital, photo, realistic, 3d, painting, render, smooth, frame, border, boxed, margins",
         "steps": 20,
-        "cfg": 5.0,
+        "cfg": 6.0,
         "sampler_name": "euler",
         "scheduler": "normal"
     },
@@ -133,7 +133,7 @@ class RPGMonsterGenerator:
         # 基本的なネガティブセット（枠線・文字・署名抑制）
         # woman を削除し、性別を種族プロンプトで制御できるようにする
         resolved_negatives = [
-            "modern, sci-fi, anime, photo, humanoid, warrior, person, man, "
+            "modern, sci-fi, anime, photo, "
             "frame, border, boxed, picture frame, cropping, margins, bleed, canvas frame, "
             "text, watermark, signature, letters, artist name, logo, words, digits"
         ]
