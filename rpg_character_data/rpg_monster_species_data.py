@@ -66,8 +66,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "humanoid, person"
     },
     "Medusa": {
-        "prompt": "A serpent-bodied woman with writhing snakes for hair, petrifying petrifying gaze",
-        "negative_prompt": "animal, cute"
+        "prompt": "A serpent-bodied woman with writhing snakes for hair, petrifying gaze, wearing dark ornate stone armor and mystical cloth wraps",
+        "negative_prompt": "animal, cute, nudity, bare skin, exposed chest, nipples"
     },
     "Gargoyle": {
         "prompt": "A stone-skinned winged gargoyle sentinel, rocky wings, perched on a gothic pedestal",
@@ -102,8 +102,8 @@ MONSTER_SPECIES_DATA = {
         "negative_prompt": "human, natural, robotic"
     },
     "Harpy": {
-        "prompt": "A creature with a woman's torso and wings and talons of a bird of prey, perched on a pillar, fierce bird-like eyes",
-        "negative_prompt": "animal, cute, purely human"
+        "prompt": "A creature with a woman's torso covered in dense feathers and tattered cloth, wings and talons of a bird of prey, perched on a pillar, fierce bird-like eyes",
+        "negative_prompt": "animal, cute, purely human, nudity, bare skin, exposed chest, nipples"
     },
     "Wraith": {
         "prompt": "A spectral figure in tattered black cowls, no face but glowing eyes, holding a cold scythe, floating shadow",
