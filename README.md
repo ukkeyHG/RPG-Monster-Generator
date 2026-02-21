@@ -9,8 +9,8 @@ RPG用のモンスター画像を生成するための ComfyUI カスタムノ�
 
 ## 構成
 
-- `__init__.py`: ComfyUI 用のカスタムノード本体（エントリーポイント）。
-
+- `rpg_monster_generator.py`: ComfyUI 用のカスタムノード本体。
+- `REFERENCE_GUIDE.md`: 各設定項目（種族、属性、スタイル等）の詳細解説。
 - `rpg_character_data/`: 種族や属性などの定義データ。
 
 ## 導入方法
