@@ -142,6 +142,13 @@ class RPGMonsterGenerator:
             p, n = ("", "")
             if isinstance(entry, dict):
                 p, n = entry.get("prompt", ""), entry.get("negative_prompt", "")
+                
+                # サイズ感の制御：種族(MONSTER_SPECIES_DATA)のエントリを処理する際にサイズキーワードを挿入
+                if "size" in entry:
+                    if entry["size"] == "small":
+                        resolved_positives.append("tiny miniature creature, small size, macro photography view")
+                    else:
+                        resolved_positives.append("massive colossal beast, giant size, low angle shot")
             else:
                 p = str(entry)
             
