@@ -2,8 +2,8 @@
 
 MONSTER_SPECIES_DATA = {
     "Slime": {
-        "prompt": "An amorphous pulsating slime monster, iridescent translucent green gelatinous body, glowing core inside, viscous fluid form, caustic ripples, dripping and wobbling, organic shape",
-        "negative_prompt": "tower, pillar, solid, humanoid, warrior, person, text, watermark, signature, letters, artist name"
+        "prompt": "An amorphous pulsating slime monster, purely non-humanoid glob, simple blob shape, iridescent translucent green gelatinous body, glowing core inside, viscous fluid form, dripping and wobbling",
+        "negative_prompt": "humanoid, person, face, eyes, mouth, teeth, nose, head, torso, arms, legs, hands, feet, claws, muscular, bones, clothes, silhouette, tower, pillar, solid, text, watermark, signature, letters, artist name"
     },
     "Skeleton": {
         "prompt": "An animated skeletal warrior, bleached bones, glowing hollow eye sockets, clutching a cracked shield",
